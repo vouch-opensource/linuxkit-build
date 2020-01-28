@@ -1,0 +1,24 @@
+name: linuxkit-builder
+author: 'Ray McDermott'
+description: 'Build multiarch OS images using LinuxKit'
+branding:
+  icon: package
+  color: purple
+inputs:
+  config:
+    description: 'LinuxKit YAML configuration to build (eg lxk-build.yml)'
+    required: true
+  format:
+    description: 'The output format (eg aws, gcp, iso-efi, etc...)'
+    required: false
+    default: 'kernel+initrd'
+outputs:
+  files:
+    description: 'The file(s) that were built'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.config }}
+    - ${{ inputs.format }}
+
