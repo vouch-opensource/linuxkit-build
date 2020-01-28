@@ -2,7 +2,7 @@
 
 set -ex
 
-OUTPUT_DIR=/tmp/lxk-build
+OUTPUT_DIR=lxk-build-output
 
 mkdir ${OUTPUT_DIR}
 
