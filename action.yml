@@ -6,7 +6,7 @@ branding:
   color: purple
 inputs:
   config:
-    description: 'LinuxKit YAML configuration to build (eg lxk-build.yml)'
+    description: 'LinuxKit YAML configuration file(s) (eg lxk-build.yml)'
     required: true
   format:
     description: 'The output format (eg aws, gcp, iso-efi, etc...)'
